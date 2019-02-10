@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {Actions} from 'react-native-router-flux';
-import {Platform,StyleSheet,View,Button,Image} from 'react-native';
+import {Platform,StyleSheet,View,Button,Image,StatusBar} from 'react-native';
 const styles = StyleSheet.create({
 	container: {
 	  flex: 1,
@@ -27,6 +27,7 @@ export default class Rootscreen extends Component{
 	render(){
 		return (
 			<View style={styles.container}>
+			<StatusBar backgroundColor={'#ffffff'} barStyle={'dark-content'} />
  	  	<Image source={require('../images/Buildings.jpg') } blurRadius={blur_radius} style={styles.bg}/>
  		<View style={styles.btnWrap}>
  			<Button title={'Purchase'} ref={'purchase'} onPress={

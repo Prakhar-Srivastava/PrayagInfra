@@ -17,11 +17,11 @@ export default class App extends Component {
 			<Scene
 				key={'root'}
 				initial
-				title={'PrayagInfra'}
+				title={'Prayag InfraCity'}
 			>
 				<Scene
 					key={'splash'}
-					title={'PrayagInfra'}
+					title={'Prayag InfraCity'}
 					component={Rootscreen}
 				></Scene>
 				<Scene
