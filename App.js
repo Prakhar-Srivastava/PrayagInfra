@@ -11,6 +11,7 @@ import { Router,Scene} from 'react-native-router-flux'
 import Rootscreen from './screens/Splash'
 import Sellscreen from './screens/Sell'
 import Purchasescreen from './screens/Purchase'
+import Enquiry from './screens/Enquiry'
 export default class App extends Component {
 	render(){
 		return (<Router>
@@ -33,6 +34,11 @@ export default class App extends Component {
 					key={'purchase'}
 					title={'Purchase'}
 					component={Purchasescreen}
+				></Scene>
+				<Scene
+					key={'enquiry'}
+					title={'Enquiry'}
+					component={Enquiry}
 				></Scene>
 			</Scene>
 		</Router>)

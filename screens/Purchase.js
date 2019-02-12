@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import {Actions} from 'react-native-router-flux'
 import {View,Text,StyleSheet,ScrollView,Image,TouchableOpacity} from 'react-native'
 const styles=StyleSheet.create({
 	container: {
@@ -53,7 +54,7 @@ const styles=StyleSheet.create({
 	resultImage: {
 		height: 100,
 		width: 100,
-		borderRadius: 300,
+		borderRadius: 100,
 		borderWidth: 1,
 		borderColor: '#ddd',
 	},
@@ -155,12 +156,18 @@ const ResultCard=({
 			</Text>
 		</View>
 		<View style={styles.resultButtonContainer}>
-			<TouchableOpacity style={[styles.resultButton,{marginRight: 2}]}>
+			<TouchableOpacity 
+				style={[styles.resultButton,{marginRight: 2}]}>
+			
 				<Text style={{color: 'red',textAlign: 'center'}}>
 					Get phone
 				</Text>
 			</TouchableOpacity>
-			<TouchableOpacity style={[styles.resultButton,{backgroundColor: 'red'}]}>
+			<TouchableOpacity 
+				style={[styles.resultButton,{backgroundColor: 'red'}]
+				}
+				onPress={event=>Actions.enquiry()}
+			>
 				<Text style={{color: '#fff', textAlign: 'center'}}>
 					Send enquiry
 				</Text>
