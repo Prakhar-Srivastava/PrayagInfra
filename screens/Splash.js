@@ -18,6 +18,15 @@ const styles = StyleSheet.create({
 		flex: 1,
 		position: 'absolute',
 	},
+	logo: {
+		height: 150,
+		width: 150,
+		backgroundColor: '#fff',
+		padding: 10,
+		borderRadius: 300,
+		borderWidth: 10,
+		borderColor: '#fff',
+	},
 	button: {
 		borderColor: 'red',
 		borderWidth: 1,
@@ -41,6 +50,7 @@ export default class Rootscreen extends Component{
 			<View style={styles.container}>
 				<StatusBar backgroundColor={'#fff'} barStyle={'dark-content'} />
 				<Image source={require('../images/Buildings.jpg') } blurRadius={blur_radius} style={styles.bg}/>
+				<Image source={require('../images/Logo.png')} style={styles.logo}  />
 				<View style={styles.btnWrap}>
 					<TouchableOpacity style={styles.button}onPress={
 						event=>{

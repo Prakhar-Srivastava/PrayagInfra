@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import {View,Text,StyleSheet,ScrollView,Image,TouchableOpacity,TextInput} from 'react-native'
+import {View,Text,StyleSheet,ScrollView,TouchableOpacity,TextInput} from 'react-native'
 const styles=StyleSheet.create({
 	container: {
 		flex: 1,
@@ -47,17 +47,7 @@ const styles=StyleSheet.create({
 		height: 40,
 	},
 })
-/*const InputField=({label="label"})=>(
-	<View style={styles.container}>
-		<Text style={styles.label} ref={'label'} >{label}</Text>
-		<TextInput style={styles.input} onPress={
-			event=>{
-				console.log('It\'s all cool')
-			}
-		}></TextInput>
-	</View>
-)*/
-class InputField extends Component{
+export class InputField extends Component{
 	constructor(props){
 		super(props)
 		this.label=props.label||'Label'
@@ -65,11 +55,6 @@ class InputField extends Component{
 		this.keyboardType=this.keyboardType||'default'
 		this.multiline=props.multiline||false
 	}
-	/*handleTap=event=>{
-		this._label.setNativeProps({style: {
-			color: 'red',
-		}})
-	}*/
 	render(){
 		return(
 		<View style={[styles.container,{padding: 20,borderBottomColor: '#979797',borderBottomWidth: 0.7}]}>
@@ -84,11 +69,7 @@ class InputField extends Component{
 			placeholder={this.placeholder}
 			keyboardType={this.keyboardType}
 			multiline={this.multiline}
-			onFocus={
-				event=>{
-					//this.handleTap()
-					console.log('Hello')
-			}}></TextInput>
+			/>
 		</View>
 		)
 	}
@@ -99,7 +80,7 @@ export default class Enquiry extends Component{
 		return(
 			<ScrollView style={{backgroundColor: '#fff'}}>
 				<InputField label={'Full Name'} placeholder={'John Smith'}/>
-				<InputField label={'Contact Number'} placeholder={'1234567890'} keyboardType={'number-pad'} />
+				<InputField label={'Contact Number'} placeholder={'1234567890'} keyboardType={'phone-pad'} />
 				<InputField label={'Email'} placeholder={'someone@example.com'} keyboardType={'email'} />
 				<InputField label={'Query'} multiline={true}/>
 				<InputField label={'Are you considering to buy this?'} placeholder={'Your answer'} />
