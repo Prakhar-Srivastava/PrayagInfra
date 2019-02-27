@@ -1,6 +1,6 @@
-import React,{Component} from 'react';
-import {Actions} from 'react-native-router-flux';
-import {Platform,StyleSheet,View,Button,Image,StatusBar,TouchableOpacity,Text} from 'react-native';
+import React,{Component} from 'react'
+import {Actions} from 'react-native-router-flux'
+import {Platform,StyleSheet,ScrollView,View,Button,Image,StatusBar,TouchableOpacity,Text} from 'react-native'
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
@@ -47,7 +47,7 @@ const blur_radius=Platform.select({
 export default class Rootscreen extends Component{
 	render(){
 		return (
-			<View style={styles.container}>
+			<ScrollView contentContainerStyle={styles.container}>
 				<StatusBar backgroundColor={'#fff'} barStyle={'dark-content'} />
 				<Image source={require('../images/Buildings.jpg') } blurRadius={blur_radius} style={styles.bg}/>
 				<Image source={require('../images/Logo.png')} style={styles.logo}  />
@@ -56,7 +56,7 @@ export default class Rootscreen extends Component{
 						event=>{
 							return Actions.purchase()
 						}}>
-							<Text style={{color: '#fff',textAlign: 'center'}}>PURCHASE</Text>
+						<Text style={{color: '#fff',textAlign: 'center'}}>PURCHASE</Text>
 					</TouchableOpacity>
 				</View>
 				<View style={styles.btnWrap}>
@@ -68,7 +68,18 @@ export default class Rootscreen extends Component{
 						<Text style={{color: '#fff',textAlign: 'center'}}>SELL</Text>
 					</TouchableOpacity>
 				</View>
-			</View>
+				<Text style={{
+					marginTop: 20,
+					backgroundColor: '#ddddddee',
+					bottom: 0,
+					position: 'absolute',
+					padding: 10,
+					color: '#000',
+				}}>
+					Built for PrayagInfra City, Jhunsi, Prayagraj by Robo360 Pvt. Ltd.
+				</Text>
+
+			</ScrollView>
 		)
 	}
 }

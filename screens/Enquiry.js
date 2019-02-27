@@ -57,23 +57,22 @@ export class InputField extends Component{
 	}
 	render(){
 		return(
-		<View style={[styles.container,{padding: 20,borderBottomColor: '#979797',borderBottomWidth: 0.7}]}>
-			<Text
-			ref={component=>this._label=component}
-			style={styles.label} ref={'label'}>
-				{this.label}
-			</Text>
-			<TextInput
-			style={this.multiline?styles.multilineInput:styles.input}
-			selectionColor={'red'}
-			placeholder={this.placeholder}
-			keyboardType={this.keyboardType}
-			multiline={this.multiline}
-			/>
-		</View>
+			<View style={[styles.container,{padding: 20,borderBottomColor: '#979797',borderBottomWidth: 0.7}]}>
+				<Text
+					ref={component=>this._label=component}
+					style={styles.label} ref={'label'}>
+					{this.label}
+				</Text>
+				<TextInput
+					style={this.multiline?styles.multilineInput:styles.input}
+					selectionColor={'red'}
+					placeholder={this.placeholder}
+					keyboardType={this.keyboardType}
+					multiline={this.multiline}
+				/>
+			</View>
 		)
 	}
-
 }
 export default class Enquiry extends Component{
 	render(){
@@ -86,11 +85,14 @@ export default class Enquiry extends Component{
 				<InputField label={'Are you considering to buy this?'} placeholder={'Your answer'} />
 				<View style={[styles.container,{margin: 10}]}>
 					<TouchableOpacity 
-					style={[styles.button]}
-					onPress={event=>alert('Submitted')}
+						style={[styles.button]}
+						onPress={event=>alert('Submitted to PrayagInfra City, Prayagraj')}
 					>
 						<Text style={{color: '#fff',textAlign: 'center', padding: 5}}>Submit</Text>
 					</TouchableOpacity>
+					<Text>
+						Developed by Robo360 Pvt. Ltd.
+					</Text>
 				</View>
 			</ScrollView>
 		)

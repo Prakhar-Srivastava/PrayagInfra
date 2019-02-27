@@ -39,11 +39,14 @@ export default class Enquiry extends Component{
 				<InputField label={'Price'} />
 				<View style={[styles.container,{margin: 10}]}>
 					<TouchableOpacity 
-					style={[styles.button]}
-					onPress={event=>alert('Submitted')}
+						style={[styles.button]}
+						onPress={event=>alert('Submitted to PrayagInfra City, Prayagraj')}
 					>
 						<Text style={{color: '#fff',textAlign: 'center', padding: 5}}>Submit</Text>
 					</TouchableOpacity>
+					<Text> 
+						Developed by Robo360 Pvt. Ltd.
+					</Text>
 				</View>
 			</ScrollView>
 		)

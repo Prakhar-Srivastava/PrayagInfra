@@ -183,9 +183,9 @@ export default class Purchasescreen extends Component{
 				<TopContainer />
 				<ScrollView style={styles.scrollContainer} >
 					<ResultCard 
-						title={'3 BHK flat/appartment 130sq. yards'}
+						title={'3 BHK flat/appartment'}
 						img={require('../images/Building_1.jpg')}
-						price={70} locality={'Chattarpur'}
+						price={70} locality={'Naini'}
 						perks={'3 Baths, Semi-Furnished, East Facing, 1 Balcony, 130sq. Yards'}
 						text={'3 BHK flat for sale in Chattarpur Farms, New Delhi, build up Area is 130sq. yards, resale property, 3 bedrooms, 1 balcony, semi-furnished, 2nd floor, East facing'}
 					/>
